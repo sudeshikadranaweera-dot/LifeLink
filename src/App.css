@@ -33,7 +33,6 @@ body {
   color: var(--gray-900);
 }
 
-/* ===== BUTTONS ===== */
 .btn-primary {
   background: var(--primary);
   color: white;
@@ -108,7 +107,11 @@ body {
   transition: all 0.2s;
 }
 
-/* ===== BADGES ===== */
+.btn-success:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
 .badge-emergency {
   background: #ffe0e3;
   color: var(--emergency);
@@ -139,7 +142,6 @@ body {
   font-weight: 700;
 }
 
-/* ===== FORMS ===== */
 .form-group {
   margin-bottom: 18px;
 }
@@ -212,7 +214,6 @@ body {
   box-shadow: 0 0 0 4px rgba(26,122,74,0.1);
 }
 
-/* ===== CARDS ===== */
 .stat-card {
   background: white;
   border-radius: var(--radius-lg);
@@ -250,7 +251,6 @@ body {
   border: 1px solid var(--gray-200);
 }
 
-/* ===== TABLE ===== */
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -284,7 +284,6 @@ body {
   background: var(--gray-100);
 }
 
-/* ===== ALERTS ===== */
 .alert-success {
   background: #d4edda;
   color: #155724;
@@ -318,7 +317,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* ===== LOADING SPINNER ===== */
 .loading {
   display: flex;
   align-items: center;
@@ -341,14 +339,12 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* ===== FLOATING ANIMATION ===== */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
   100% { transform: translateY(0px); }
 }
 
-/* ===== SIDEBAR LAYOUT ===== */
 .app-layout {
   display: flex;
   min-height: 100vh;
@@ -550,7 +546,6 @@ body {
   padding: 32px;
 }
 
-/* ===== LANDING PAGE ===== */
 .landing-navbar {
   background: white;
   padding: 0 60px;
@@ -655,8 +650,6 @@ body {
 }
 
 .hero-circle {
-  display: none;
-
   width: 380px;
   height: 380px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
@@ -804,7 +797,6 @@ body {
   gap: 8px;
 }
 
-/* ===== AUTH PAGES ===== */
 .auth-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -966,7 +958,6 @@ body {
   font-weight: 600;
 }
 
-/* ===== ADMIN LOGIN ===== */
 .admin-login-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #0f3d23, #25a660);
@@ -1036,7 +1027,6 @@ body {
   text-align: center;
 }
 
-/* ===== DASHBOARD ===== */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1140,7 +1130,6 @@ body {
   line-height: 1.6;
 }
 
-/* ===== REQUEST CARDS ===== */
 .request-type-icon {
   width: 44px;
   height: 44px;
@@ -1187,7 +1176,6 @@ body {
   gap: 6px;
 }
 
-/* ===== FILTER BAR ===== */
 .filter-bar {
   background: white;
   padding: 16px 24px;
@@ -1207,7 +1195,6 @@ body {
   white-space: nowrap;
 }
 
-/* ===== DETAIL PANEL ===== */
 .requests-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -1251,7 +1238,6 @@ body {
   color: var(--gray-900);
 }
 
-/* ===== POST REQUEST ===== */
 .donation-type-selector {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1303,6 +1289,8 @@ body {
   font-size: 13px;
   font-weight: 500;
   transition: all 0.2s;
+  background: white;
+  font-family: 'Poppins', sans-serif;
 }
 
 .priority-radio.active-emergency {
@@ -1329,7 +1317,6 @@ body {
   gap: 16px;
 }
 
-/* ===== ADMIN SIDEBAR ===== */
 .admin-sidebar {
   width: var(--sidebar-width);
   background: var(--primary-dark);
@@ -1395,7 +1382,6 @@ body {
   color: #ff8a8a;
 }
 
-/* ===== ADMIN TOP BAR ===== */
 .admin-top-bar {
   background: white;
   padding: 16px 32px;
@@ -1408,7 +1394,6 @@ body {
   z-index: 50;
 }
 
-/* ===== TAB BUTTONS ===== */
 .tab-buttons {
   display: flex;
   gap: 4px;
@@ -1438,7 +1423,6 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* ===== EMPTY STATE ===== */
 .empty-state {
   text-align: center;
   padding: 60px 20px;
@@ -1458,7 +1442,7 @@ body {
   color: var(--gray-700);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -1507,11 +1491,27 @@ body {
     display: none;
   }
 
+  .admin-sidebar {
+    display: none;
+  }
+
   .landing-navbar {
     padding: 0 24px;
   }
 
   .landing-nav-links {
     display: none;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .page-content {
+    padding: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
