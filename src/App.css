@@ -654,9 +654,9 @@ body {
   gap: 16px;
 }
 
-.hero-circle {{
+.hero-circle {
   display: none;
-}
+
   width: 380px;
   height: 380px;
   background: linear-gradient(135deg, var(--primary), var(--accent));
