@@ -262,3 +262,4 @@ src="../hero.jpg"
   );
 }
 
+export default LandingPage;
